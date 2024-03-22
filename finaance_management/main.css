@@ -7,8 +7,12 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+   
 }
-
+html{
+    scroll-behavior: smooth;
+}
 .nav-links {
     list-style-type: none;
     display: none;
@@ -35,17 +39,20 @@ body {
 
 .social-icons {
     display: block;
+    
 }
 
 .nav-container {
-    padding: 0 20px;
+    padding: 0 20px 2px;
     background: rgba(78, 0, 78, 0.8);
     display: flex;
     justify-content: space-between;
+  
 }
 
 .nav-container img {
-    width: 100px;
+    width: 50px;
+   
     align-self: center;
 }
 

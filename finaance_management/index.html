@@ -7,15 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="expense.css">
     <script src="https://kit.fontawesome.com/332a215f17.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <!--Header-=====================-->
  <header>
      <nav>
          <div class="nav-container">
-             <img src="images/logo.png" alt="logo" class="logo">
+             <img src="logo.svg" alt="logo" class="logo">
              <div class="btn">
                  <div class="line1"></div>
                  <div class="line2"></div>
@@ -51,8 +53,8 @@
           Financial Management</h1>
         <p>Master Your Money: 
             </p>
+            <a href="#section-center"><button type="button" class="btn about-btn btn-primary" >Get Started</button></a>
             
-            <button type="button" class="btn about-btn btn-primary">Get Started</button>
              
     </div>
 </div>
@@ -72,65 +74,108 @@
             </p>
                 <a href="#" class="about-btn">Find a Trainee</a>
                 </div>
-           </article>
-
-           <!--End of About Info-===============-->
-           <!---About Image====-->
-           <article class="about-img">
-               <div class="about-img-container">
-               <img src="images/about.jpg" class="about-img" alt="about"/>
-               </div>
-           </article>
-
-           <!--End of About Images========-->
+              </article>
        </div>
    </section>
 
    <!--End of About Section====================-->
    <!--==============Work out section=====================-->
-   <section id="workout">
-      <div class="section-center">
+   <section id="workout" class="expense">
+      <div class="section-center" id="section-center">
        <!--title-============-->
-       <div class="work-title">
-           <h3 class="title">Why Work Out here</h3>
+       <h1 class="heading" id="heading">Product Expenses Tracker</h1>
+       <div class="wrapper">
+         <div class="container">
+           <div class="form_wrapper">
+             <form>
+               <label for="total-money">Total Budget:</label>
+               <input type="number" id="total_budget" />
+             </form>
+             <form>
+               <div>
+                 <label for="product-name">Product Name:</label>
+                 <input type="text" id="product_name" />
+               </div>
+               <div>
+                 <label for="product-price">Price:</label>
+                 <input type="number" id="product_price" />
+               </div>
+               <div>
+                 <label for="numberofproduct">Number of Product:</label>
+                 <input
+                   type="number"
+                   id="numberofproduct"
+                   min="1"
+                   max="100000"
+                   value="1"
+                 />
+               </div>
+               <button type="button" class="btn-expenses" id="add_product">Add Product</button>
+             </form>
+           </div>
+           <div class="product_table_and_result">
+             <table id="product_table">
+               <thead>
+                 <tr>
+                   <th>Product Name</th>
+                   <th>Price</th>
+                   <th>Actions</th>
+                 </tr>
+               </thead>
+               <tbody></tbody>
+             </table>
+             <div class="budget_tacker_info">
+               <div>
+                 <span>Expenses</span>
+                 <h1 id="total_expenses">0</h1>
+               </div>
+               <div>
+                 <span>Remaining</span>
+                 <h1 id="remaining_value">0</h1>
+               </div>
+               <div>
+                 <span>Total Money</span>
+                 <h1 id="total">0</h1>
+               </div>
+             </div>
+           </div>
+         </div>
        </div>
-       <!--End of title===================-->
-       <div class="work-center">
-           <!--workout detail-->
-           <article class="service">
-             <i class="fas fa-bolt"></i>
-             <h3>Boost your fitness</h3>
-             <p>Lorem ipsum dolor sit amet consectetur 
-            adipisicing elit. Voluptatum, minus.</p>
-            </article>
-           <!--End of workout===========-->
-           <!--workout detail-->
-           <article class="service">
-            <i class="fas fa-leaf"></i>
-            <h3>Mindful training</h3>
-            <p>Lorem ipsum dolor sit amet consectetur 
-           adipisicing elit. Voluptatum, minus.</p>
-           </article>
-          <!--End of workout===========-->
-          <!--workout detail-->
-          <article class="service">
-            <i class="fas fa-battery-three-quarters"></i>
-            <h3>Core Strength</h3>
-            <p>Lorem ipsum dolor sit amet consectetur 
-           adipisicing elit. Voluptatum, minus.</p>
-           </article>
-          <!--End of workout===========-->
-           <!--workout detail-->
-           <article class="service">
-            <i class="fas fa-smile-beam"></i>
-            <h3>Positivity</h3>
-            <p>Lorem ipsum dolor sit amet consectetur 
-           adipisicing elit. Voluptatum, minus.</p>
-           </article>
-          <!--End of workout===========-->
-        </div>
+      
        </div>
    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
    <!--=========End of Work out Section===============-->
  <!--=========Testimonial  Section===============-->
@@ -273,11 +318,8 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!---Script js-->
-    <script src="script.js"></script>
-</body>
-</html>
-<!-- partial -->
-  <script  src="./script.js"></script>
+    <script src="expense.js"></script>
+    <script src="main.js"></script>
 
 </body>
 </html>
